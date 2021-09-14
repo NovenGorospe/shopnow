@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div id="container">
+        <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top">
+          <div class="navbar-header">
+            <a id="logo" class="navbar-brand " href="index.html">ShopNow</a>
+          </div>
+         
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="Productlist.html">Product List <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a id="link" class="nav-link" href="category.html">Category</a>
+              </li>
+              <li class="nav-item">
+                <a id="link" class="nav-link" href="about.html">About</a>
+              </li>
+            
+            </ul>
+            <ul class="navbar-nav mr-auto float-right">
+              <li><a style=" padding-left: 10px;" id="link" class="nav-link" href="" data-toggle="modal" data-target="#cart">(<span class="total-count"></span>) <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Cart</a></li>
+              <li><a  style=" padding-left: 10px;" id="link" class=" clear-cart nav-link " href="" class=""> <span class="glyphicon glyphicon-trash"></span>&nbsp;Clear Cart</a></li>
+             
+            
+               <li><a  style=" padding-left: 10px;"id="link"  class="nav-link" href=""  data-toggle="modal" data-target="#notif"><span class="glyphicon glyphicon-globe"></span> Notification</a></li>
+              <li><a  style=" padding-left: 10px;" id="link" class="nav-link"  href="#"><span class="glyphicon glyphicon-user"></span> Help</a></li>
+              <li><a   style=" padding-left: 10px;"id="link" class="nav-link" href="" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          
+            </ul>
+           
+          </div>
+        </nav>
+        
+          <div id="header">
+            <div id="headerleft">
+                <a id="header-logo" class="navbar-brand " href="#">ShopNow</a>
+          </div>
+          <div >
+            
+            <form >
+              <div id="searchengine" class="input-group">
+                <input style="width: 100%;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Products.." title="Type in a name">
+           
+               
+              </div>
+            </form>
+            </div>
+          </div>
+          </div>
+          <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div> 
+ <!-- Modal -->
+ <div class="modal fade" id="notif" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Notifiation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="cotent">
+         No Notifications
+       </div>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="cotent">
+      <form action="">
+        <span>Username</span>
+        <input type="text" class="form-control form-control-lg" style="width: 100%;"> <br>
+        <span>Password</span>
+        <input type="password" class="form-control form-control-lg" style="width: 100%;">
+      </form>
+        <p>No account: <a href="#"> Sign Up here....</a></p>
+       </div>
+
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">OK</button>
+      
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+              <div id="content-add">
+                <div id="leftcontent">
+                      <div id="adds">
+                        <img  id="img1" class="mySlides" src="image/banneradds4.jpg" alt="">
+                        <img id="img1"  class="mySlides" src="image/banneradds1.jpg" alt="">
+                        <img  id="img1" class="mySlides" src="image/banneradds3.jpg" alt="">
+                        <img  id="img1" class="mySlides" src="image/banneradds2.jpg" alt="">
+                      </div>
+                </div>
+                <div id="rightcontent">
+                  <center>
+                  <div id="addsright">
+                    <img  id="vouchers"  src="image/adds2.jpg" alt="">
+                    <img  id="vouchers"  src="image/adds1.jpg" alt="">
+                  </div>
+                </center>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <br>
+              <h3 style="padding: 20px;">Category</h3>
+                <div id="category">
+                  <div class="row">
+                    <div class="column">
+                      <div class="card">
+                        <img src="image/menapparel.jpg" alt="" width="100%" height="150px">
+                        <p id="name">Men Apparels</p>
+                        <a href="Productlist.html#men" ><button>Show More</button></a>
+                      </div>
+                    </div>
+                  
+                    <div class="column">
+                      <div class="card">
+                        <img src="image/womenapparel.jpg" alt="" width="100%" height="150px">
+                        <p id="name">Women Apparels</p>
+                        <a href="Productlist.html#women" ><button>Show More</button></a>
+                      </div>
+                    </div>
+                    
+                    <div class="column">
+                      <div class="card">
+                        <img src="image/school.jpg" alt="" width="100%" height="150px">
+                        <p id="name">School Supply </p>
+                        <a href="Productlist.html#school" ><button>Show More</button></a>
+                      </div>
+                    </div>
+                    
+                    <div class="column">
+                      <div class="card">
+                        <img src="image/kids.jpg" alt="" width="100%" height="150px">
+                        <p id="name">Kids Apparels</p>
+                        <a href="Productlist.html#kid" ><button>Show More</button></a>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="image/apliances.jpg" alt="" width="100%" height="150px">
+                        <p id="name">Home Appliances</p>
+                        <a href="Productlist.html#Appliances" ><button>Show More</button></a>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="card">
+                        <img src="image/gadgets.jpg" alt="" width="100%" height="150px">
+                        <p id="name">Gadget</p>
+                        <a href="Productlist.html#gadget" ><button>Show More</button></a>
+                      </div>
+                    </div>
+                  </div>
+                   
+                </div>
+           </div>
+           
+              <div id="footer">
+                <div id="leftfooter">
+                <p style="text-align: center;"> Phone Nmber:0999999999 <Br>
+              Address: Santa maria Isabela <br>
+            Email Address:goroospenoven@gmail.com</p></div>
+             
+              </div>
+              <script>
+                // ************************************************
+              // Shopping Cart API
+              // ************************************************
+              
+              var shoppingCart = (function() {
+              // =============================
+              // Private methods and propeties
+              // =============================
+              cart = [];
+              
+              // Constructor
+              function Item(name, price, count) {
+              this.name = name;
+              this.price = price;
+              this.count = count;
+              }
+              
+              // Save cart
+              function saveCart() {
+              sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+              }
+              
+              // Load cart
+              function loadCart() {
+              cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+              }
+              if (sessionStorage.getItem("shoppingCart") != null) {
+              loadCart();
+              }
+              
+              
+              // =============================
+              // Public methods and propeties
+              // =============================
+              var obj = {};
+              
+              // Add to cart
+              obj.addItemToCart = function(name, price, count) {
+              for(var item in cart) {
+              if(cart[item].name === name) {
+                cart[item].count ++;
+                saveCart();
+                return;
+              }
+              }
+              var item = new Item(name, price, count);
+              cart.push(item);
+              saveCart();
+              }
+              // Set count from item
+              obj.setCountForItem = function(name, count) {
+              for(var i in cart) {
+              if (cart[i].name === name) {
+                cart[i].count = count;
+                break;
+              }
+              }
+              };
+              // Remove item from cart
+              obj.removeItemFromCart = function(name) {
+              for(var item in cart) {
+                if(cart[item].name === name) {
+                  cart[item].count --;
+                  if(cart[item].count === 0) {
+                    cart.splice(item, 1);
+                  }
+                  break;
+                }
+              }
+              saveCart();
+              }
+              
+              // Remove all items from cart
+              obj.removeItemFromCartAll = function(name) {
+              for(var item in cart) {
+              if(cart[item].name === name) {
+                cart.splice(item, 1);
+                break;
+              }
+              }
+              saveCart();
+              }
+              
+              // Clear cart
+              obj.clearCart = function() {
+              cart = [];
+              saveCart();
+              }
+              
+              // Count cart 
+              obj.totalCount = function() {
+              var totalCount = 0;
+              for(var item in cart) {
+              totalCount += cart[item].count;
+              }
+              return totalCount;
+              }
+              
+              // Total cart
+              obj.totalCart = function() {
+              var totalCart = 0;
+              for(var item in cart) {
+              totalCart += cart[item].price * cart[item].count;
+              }
+              return Number(totalCart.toFixed(2));
+              }
+              
+              // List cart
+              obj.listCart = function() {
+              var cartCopy = [];
+              for(i in cart) {
+              item = cart[i];
+              itemCopy = {};
+              for(p in item) {
+                itemCopy[p] = item[p];
+              
+              }
+              itemCopy.total = Number(item.price * item.count).toFixed(2);
+              cartCopy.push(itemCopy)
+              }
+              return cartCopy;
+              }
+              
+              // cart : Array
+              // Item : Object/Class
+              // addItemToCart : Function
+              // removeItemFromCart : Function
+              // removeItemFromCartAll : Function
+              // clearCart : Function
+              // countCart : Function
+              // totalCart : Function
+              // listCart : Function
+              // saveCart : Function
+              // loadCart : Function
+              return obj;
+              })();
+              
+              
+              // *****************************************
+              // Triggers / Events
+              // ***************************************** 
+              // Add item
+              $('.add-to-cart').click(function(event) {
+              event.preventDefault();
+              var name = $(this).data('name');
+              var price = Number($(this).data('price'));
+              shoppingCart.addItemToCart(name, price, 1);
+              displayCart();
+              });
+              
+              // Clear items
+              $('.clear-cart').click(function() {
+              shoppingCart.clearCart();
+              displayCart();
+              });
+              
+              
+              function displayCart() {
+              var cartArray = shoppingCart.listCart();
+              var output = "";
+              for(var i in cartArray) {
+              output += "<tr>"
+              + "<td>" + cartArray[i].name + "</td>" 
+              + "<td>(" + cartArray[i].price + ")</td>"
+              + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+              + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+              + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+              + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+              + " = " 
+              + "<td>" + cartArray[i].total + "</td>" 
+              +  "</tr>";
+              }
+              $('.show-cart').html(output);
+              $('.total-cart').html(shoppingCart.totalCart());
+              $('.total-count').html(shoppingCart.totalCount());
+              }
+              
+              // Delete item button
+              
+              $('.show-cart').on("click", ".delete-item", function(event) {
+              var name = $(this).data('name')
+              shoppingCart.removeItemFromCartAll(name);
+              displayCart();
+              })
+              
+              
+              // -1
+              $('.show-cart').on("click", ".minus-item", function(event) {
+              var name = $(this).data('name')
+              shoppingCart.removeItemFromCart(name);
+              displayCart();
+              })
+              // +1
+              $('.show-cart').on("click", ".plus-item", function(event) {
+              var name = $(this).data('name')
+              shoppingCart.addItemToCart(name);
+              displayCart();
+              })
+              
+              // Item count input
+              $('.show-cart').on("change", ".item-count", function(event) {
+              var name = $(this).data('name');
+              var count = Number($(this).val());
+              shoppingCart.setCountForItem(name, count);
+              displayCart();
+              });
+              
+              displayCart();
+              
+              </script>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 2500); // Change image every 2 seconds
+                }
+                </script>
+                
+        <script src="" async defer></script>
+    </body>
+</html>

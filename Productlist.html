@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div id="container">
+        <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top">
+          <div class="navbar-header">
+            <a id="logo" class="navbar-brand " href="index.html">ShopNow</a>
+          </div>
+         
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="Productlist.html">Product List <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a id="link" class="nav-link" href="category.html">Category</a>
+              </li>
+              <li class="nav-item">
+                <a id="link" class="nav-link" href="about.html">About</a>
+              </li>
+            
+            </ul>
+            <ul class="navbar-nav mr-auto float-right">
+              <li><a style=" padding-left: 10px;" id="link" class="nav-link" href="" data-toggle="modal" data-target="#cart">(<span class="total-count"></span>) <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Cart</a></li>
+              <li><a  style=" padding-left: 10px;" id="link" class=" clear-cart nav-link " href="" class=""> <span class="glyphicon glyphicon-trash"></span>&nbsp;Clear Cart</a></li>
+             
+            
+              <li><a  style=" padding-left: 10px;"id="link"  class="nav-link" href=""  data-toggle="modal" data-target="#notif"><span class="glyphicon glyphicon-globe"></span> Notification</a></li>
+              <li><a  style=" padding-left: 10px;" id="link" class="nav-link"  href="#"><span class="glyphicon glyphicon-user"></span> Help</a></li>
+              <li><a   style=" padding-left: 10px;"id="link" class="nav-link" href="" data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          
+            </ul>
+           
+          </div>
+        </nav>
+        
+          <div id="header">
+            <div id="headerleft">
+                <a id="header-logo" class="navbar-brand " href="index.html">ShopNow</a>
+          </div>
+          <div >
+            
+            <form >
+              <div id="searchengine" class="input-group">
+                <input style="width: 100%;" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Products.." title="Type in a name">
+                <div class="input-group-btn">
+                
+                </div>
+              </div>
+            </form>
+            </div>
+          </div>
+       
+          <div id="category2" class="">
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <img src="image/menapparel.jpg" alt="" width="100%" height="150px">
+                  <p id="name">Men Apparels</p>
+                  <a href="#men" ><button>Show More</button></a>
+                </div>
+              </div>
+            
+              <div class="column">
+                <div class="card">
+                  <img src="image/womenapparel.jpg" alt="" width="100%" height="150px">
+                  <p id="name">Women Apparels</p>
+                  <a href="#women" ><button>Show More</button></a>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="card">
+                  <img src="image/school.jpg" alt="" width="100%" height="150px">
+                  <p id="name">School Supply </p>
+                  <a href="#school" ><button>Show More</button></a>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="card">
+                  <img src="image/kids.jpg" alt="" width="100%" height="150px">
+                  <p id="name">Kids Apparels</p>
+                  <a href="#kid" ><button>Show More</button></a>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <img src="image/apliances.jpg" alt="" width="100%" height="150px">
+                  <p id="name">Home Appliances</p>
+                  <a href="#Appliances" ><button>Show More</button></a>
+                </div>
+              </div>
+              <div class="column">
+                <div class="card">
+                  <img src="image/gadgets.jpg" alt="" width="100%" height="150px">
+                  <p id="name">Gadget</p>
+                  <a href="#gadget" ><button>Show More</button></a>
+                </div>
+              </div>
+            </div>
+             
+          </div>
+           <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div> 
+ <!-- Modal -->
+ <div class="modal fade" id="notif" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Notifiation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="cotent">
+         No Notifications
+       </div>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      
+      </div>
+    </div>
+  </div>
+</div> 
+
+<!-- Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="cotent">
+      <form action="">
+        <span>Username</span>
+        <input type="text" class="form-control form-control-lg" style="width: 100%;"> <br>
+        <span>Password</span>
+        <input type="password" class="form-control form-control-lg" style="width: 100%;">
+      </form>
+        <p>No account: <a href="#"> Sign Up here....</a></p>
+       </div>
+
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">OK</button>
+      
+      </div>
+    </div>
+  </div>
+</div> 
+
+              
+          <br>
+          <br>
+         
+          <br>
+          <br>
+         
+         
+      <div id="column">
+            <div id="men" class="sort">
+
+                <h3 >Men Apparels</h3>
+              <div id="category">
+                <div class="row">
+                  <div class="column">
+                    <div class="card">
+                      <img src="image/1.jpg" alt="" width="100%" height="150px">
+                      <p id="name1">slimbag</p>
+                      <p id="name2">$100</p>
+                     
+                      <a href="#"  data-name="Slim_Bag" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CARTt</a>
+                    </div>
+                  </div>
+                
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men1.jpg" alt="" width="100%" height="150px">
+                      <p id="name1">bananas</p>
+                      <p id="name2">$20</p>
+                      <a href="#"  data-name="banana" data-price="20" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men2.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">White Polo</p>
+                        <p id="name2">$1100</p>
+                        <a href="#"  data-name="white_polo" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;">ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men3.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">Blue jeans</p>
+                        <p id="name2">$5100</p>
+                        <a href="#"  data-name="Blue_Jeans" data-price="5100" class="add-to-cart btn btn-primary" style="width: 100%;">ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men4.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">Gurang</p>
+                        <p id="name2">$100</p>
+                        <a href="#"  data-name="Gurang" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART </a>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men5.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">Black Shoe</p>
+                        <p id="name2">$10</p>
+                        <a href="#"  data-name="Balck_Shoe" data-price="10" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men6.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">Coat</p>
+                        <p id="name2">$1100</p>
+                        <a href="#"  data-name="Coat" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men7.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">UpperCoat</p>
+                        <p id="name2">$1100</p>
+                        <a href="#"  data-name="upperCoat" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men8.png" alt="" width="100%" height="150px">
+                        <p id="name1">Travel bag</p>
+                        <p id="name2">$1100</p>
+                        <a href="#"  data-name="bag" data-price="220" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men9.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">Blue coat</p>
+                        <p id="name2">$40</p>
+                        <a href="#"  data-name="BlueCoat" data-price="40" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men 9.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">Phone</p>
+                        <p id="name2">$1100</p>
+                        <a href="#"  data-name="banana1" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                        <img src="image/men10.jpg" alt="" width="100%" height="150px">
+                        <p id="name1">Kid Bag</p>
+                        <p id="name2">$1100</p>
+                        <a href="#"  data-name="banana2" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                  
+                    </div>
+                  </div>
+                </div>
+
+                <div id="women" class="sort">
+                    <h3 >Women Apparels</h3>
+                  <div id="category">
+                    <div class="row">
+                      <div class="column">
+                        <div class="card">
+                          <img src="image/1.jpg" alt="" width="100%" height="150px">
+                          <p id="name1">slimbag</p>
+                          <p id="name2">$100</p>
+                          <a href="#"  data-name="SLIMBAG" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                    
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/17.jpg" alt="" width="100%" height="150px">
+                          <p id="name1">Appliances</p>
+                          <p id="name2">$1100</p>
+                          <a href="#"  data-name="APPLIANCES" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/21.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Loptop</p>
+                            <p id="name2">$1100</p>
+                            <a href="#"  data-name="LAPTOP" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/16.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Home Depot</p>
+                            <p id="name2">$5100</p>
+                            <a href="#"  data-name="HOMEDEPOT" data-price="5100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/10.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Teddybear</p>
+                            <p id="name2">$100</p>
+                            <a href="#"  data-name="TEDDYBEAR" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/18.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Home ware</p>
+                            <p id="name2">$10</p>
+                            <a href="#"  data-name="HOMEWARE" data-price="10" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/9.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Kid toys</p>
+                            <p id="name2">$1100</p>
+                            <a href="#"  data-name="KIDTOY" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/7.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Italy Bag</p>
+                            <p id="name2">$1100</p>
+                            <a href="#"  data-name="ITALYBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/6.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Travel bag</p>
+                            <p id="name2">$1100</p>
+                            <a href="#"  data-name="TRAVELbag" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/12.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">jeans</p>
+                            <p id="name2">$40</p>
+                            <a href="#"  data-name="JEANS" data-price="40" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/22.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Phone</p>
+                            <p id="name2">$1100</p>
+                            <a href="#"  data-name="PHOE" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="card">
+                            <img src="image/5.jpg" alt="" width="100%" height="150px">
+                            <p id="name1">Kid Bag</p>
+                            <p id="name2">$1100</p>
+                            <a href="#"  data-name="KIDBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="school" class="sort">
+                        <h3 >School Supply</h3>
+                        <div id="category">
+                          <div class="row">
+                            <div class="column">
+                              <div class="card">
+                                <img src="image/1.jpg" alt="" width="100%" height="150px">
+                                <p id="name1">slimbag</p>
+                                <p id="name2">$100</p>
+                                <a href="#"  data-name="SLIMBAG" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                          
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/17.jpg" alt="" width="100%" height="150px">
+                                <p id="name1">Appliances</p>
+                                <p id="name2">$1100</p>
+                                <a href="#"  data-name="APPLIANCES" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/21.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Loptop</p>
+                                  <p id="name2">$1100</p>
+                                  <a href="#"  data-name="LAPTOP" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/16.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Home Depot</p>
+                                  <p id="name2">$5100</p>
+                                  <a href="#"  data-name="HOMEDEPOT" data-price="5100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/10.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Teddybear</p>
+                                  <p id="name2">$100</p>
+                                  <a href="#"  data-name="TEDDYBEAR" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/18.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Home ware</p>
+                                  <p id="name2">$10</p>
+                                  <a href="#"  data-name="HOMEWARE" data-price="10" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/9.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Kid toys</p>
+                                  <p id="name2">$1100</p>
+                                  <a href="#"  data-name="KIDTOY" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/7.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Italy Bag</p>
+                                  <p id="name2">$1100</p>
+                                  <a href="#"  data-name="ITALYBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/6.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Travel bag</p>
+                                  <p id="name2">$1100</p>
+                                  <a href="#"  data-name="TRAVELbag" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/12.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">jeans</p>
+                                  <p id="name2">$40</p>
+                                  <a href="#"  data-name="JEANS" data-price="40" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/22.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Phone</p>
+                                  <p id="name2">$1100</p>
+                                  <a href="#"  data-name="PHOE" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="card">
+                                  <img src="image/5.jpg" alt="" width="100%" height="150px">
+                                  <p id="name1">Kid Bag</p>
+                                  <p id="name2">$1100</p>
+                                  <a href="#"  data-name="KIDBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                              </div>
+                            </div>
+                          </div>
+      
+
+                        <div  id="kid"class="sort">
+                            <h3 >Kid Apparel</h3>
+                            <div id="category">
+                              <div class="row">
+                                <div class="column">
+                                  <div class="card">
+                                    <img src="image/1.jpg" alt="" width="100%" height="150px">
+                                    <p id="name1">slimbag</p>
+                                    <p id="name2">$100</p>
+                                    <a href="#"  data-name="SLIMBAG" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                              
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/17.jpg" alt="" width="100%" height="150px">
+                                    <p id="name1">Appliances</p>
+                                    <p id="name2">$1100</p>
+                                    <a href="#"  data-name="APPLIANCES" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/21.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Loptop</p>
+                                      <p id="name2">$1100</p>
+                                      <a href="#"  data-name="LAPTOP" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/16.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Home Depot</p>
+                                      <p id="name2">$5100</p>
+                                      <a href="#"  data-name="HOMEDEPOT" data-price="5100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/10.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Teddybear</p>
+                                      <p id="name2">$100</p>
+                                      <a href="#"  data-name="TEDDYBEAR" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/18.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Home ware</p>
+                                      <p id="name2">$10</p>
+                                      <a href="#"  data-name="HOMEWARE" data-price="10" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/9.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Kid toys</p>
+                                      <p id="name2">$1100</p>
+                                      <a href="#"  data-name="KIDTOY" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/7.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Italy Bag</p>
+                                      <p id="name2">$1100</p>
+                                      <a href="#"  data-name="ITALYBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/6.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Travel bag</p>
+                                      <p id="name2">$1100</p>
+                                      <a href="#"  data-name="TRAVELbag" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/12.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">jeans</p>
+                                      <p id="name2">$40</p>
+                                      <a href="#"  data-name="JEANS" data-price="40" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/22.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Phone</p>
+                                      <p id="name2">$1100</p>
+                                      <a href="#"  data-name="PHOE" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                                <div class="column">
+                                  <div class="card">
+                                      <img src="image/5.jpg" alt="" width="100%" height="150px">
+                                      <p id="name1">Kid Bag</p>
+                                      <p id="name2">$1100</p>
+                                      <a href="#"  data-name="KIDBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                  </div>
+                                </div>
+                              </div>
+          
+                            <div id="home" class="sort">
+                                <h3 >Home Appliances</h3>
+                                <div id="category">
+                                  <div class="row">
+                                    <div class="column">
+                                      <div class="card">
+                                        <img src="image/1.jpg" alt="" width="100%" height="150px">
+                                        <p id="name1">slimbag</p>
+                                        <p id="name2">$100</p>
+                                        <a href="#"  data-name="SLIMBAG" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/17.jpg" alt="" width="100%" height="150px">
+                                        <p id="name1">Appliances</p>
+                                        <p id="name2">$1100</p>
+                                        <a href="#"  data-name="APPLIANCES" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/21.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Loptop</p>
+                                          <p id="name2">$1100</p>
+                                          <a href="#"  data-name="LAPTOP" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/16.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Home Depot</p>
+                                          <p id="name2">$5100</p>
+                                          <a href="#"  data-name="HOMEDEPOT" data-price="5100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/10.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Teddybear</p>
+                                          <p id="name2">$100</p>
+                                          <a href="#"  data-name="TEDDYBEAR" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/18.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Home ware</p>
+                                          <p id="name2">$10</p>
+                                          <a href="#"  data-name="HOMEWARE" data-price="10" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/9.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Kid toys</p>
+                                          <p id="name2">$1100</p>
+                                          <a href="#"  data-name="KIDTOY" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/7.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Italy Bag</p>
+                                          <p id="name2">$1100</p>
+                                          <a href="#"  data-name="ITALYBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/6.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Travel bag</p>
+                                          <p id="name2">$1100</p>
+                                          <a href="#"  data-name="TRAVELbag" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/12.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">jeans</p>
+                                          <p id="name2">$40</p>
+                                          <a href="#"  data-name="JEANS" data-price="40" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/22.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Phone</p>
+                                          <p id="name2">$1100</p>
+                                          <a href="#"  data-name="PHOE" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                    <div class="column">
+                                      <div class="card">
+                                          <img src="image/5.jpg" alt="" width="100%" height="150px">
+                                          <p id="name1">Kid Bag</p>
+                                          <p id="name2">$1100</p>
+                                          <a href="#"  data-name="KIDBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                      </div>
+                                    </div>
+                                  </div>
+              
+
+                                <div id="gadget" class="sort">
+                                    <h3 >Gadget List</h3>
+                                    <div id="category">
+                                      <div class="row">
+                                        <div class="column">
+                                          <div class="card">
+                                            <img src="image/1.jpg" alt="" width="100%" height="150px">
+                                            <p id="name1">slimbag</p>
+                                            <p id="name2">$100</p>
+                                            <a href="#"  data-name="SLIMBAG" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                      
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/17.jpg" alt="" width="100%" height="150px">
+                                            <p id="name1">Appliances</p>
+                                            <p id="name2">$1100</p>
+                                            <a href="#"  data-name="APPLIANCES" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/21.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Loptop</p>
+                                              <p id="name2">$1100</p>
+                                              <a href="#"  data-name="LAPTOP" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/16.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Home Depot</p>
+                                              <p id="name2">$5100</p>
+                                              <a href="#"  data-name="HOMEDEPOT" data-price="5100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/10.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Teddybear</p>
+                                              <p id="name2">$100</p>
+                                              <a href="#"  data-name="TEDDYBEAR" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/18.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Home ware</p>
+                                              <p id="name2">$10</p>
+                                              <a href="#"  data-name="HOMEWARE" data-price="10" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/9.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Kid toys</p>
+                                              <p id="name2">$1100</p>
+                                              <a href="#"  data-name="KIDTOY" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/7.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Italy Bag</p>
+                                              <p id="name2">$1100</p>
+                                              <a href="#"  data-name="ITALYBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/6.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Travel bag</p>
+                                              <p id="name2">$1100</p>
+                                              <a href="#"  data-name="TRAVELbag" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/12.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">jeans</p>
+                                              <p id="name2">$40</p>
+                                              <a href="#"  data-name="JEANS" data-price="40" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/22.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Phone</p>
+                                              <p id="name2">$1100</p>
+                                              <a href="#"  data-name="PHOE" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                        <div class="column">
+                                          <div class="card">
+                                              <img src="image/5.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Kid Bag</p>
+                                              <p id="name2">$1100</p>
+                                              <a href="#"  data-name="KIDBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                  
+                  
+                                      <div id="category">
+                                        <div class="row">
+                                          <div class="column">
+                                            <div class="card">
+                                              <img src="image/1.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">slimbag</p>
+                                              <p id="name2">$100</p>
+                                              <a href="#"  data-name="SLIMBAG" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                        
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/17.jpg" alt="" width="100%" height="150px">
+                                              <p id="name1">Appliances</p>
+                                              <p id="name2">$1100</p>
+                                              <a href="#"  data-name="APPLIANCES" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/21.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Loptop</p>
+                                                <p id="name2">$1100</p>
+                                                <a href="#"  data-name="LAPTOP" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/16.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Home Depot</p>
+                                                <p id="name2">$5100</p>
+                                                <a href="#"  data-name="HOMEDEPOT" data-price="5100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/10.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Teddybear</p>
+                                                <p id="name2">$100</p>
+                                                <a href="#"  data-name="TEDDYBEAR" data-price="100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/18.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Home ware</p>
+                                                <p id="name2">$10</p>
+                                                <a href="#"  data-name="HOMEWARE" data-price="10" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/9.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Kid toys</p>
+                                                <p id="name2">$1100</p>
+                                                <a href="#"  data-name="KIDTOY" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/7.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Italy Bag</p>
+                                                <p id="name2">$1100</p>
+                                                <a href="#"  data-name="ITALYBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/6.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Travel bag</p>
+                                                <p id="name2">$1100</p>
+                                                <a href="#"  data-name="TRAVELbag" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/12.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">jeans</p>
+                                                <p id="name2">$40</p>
+                                                <a href="#"  data-name="JEANS" data-price="40" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/22.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Phone</p>
+                                                <p id="name2">$1100</p>
+                                                <a href="#"  data-name="PHOE" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                          <div class="column">
+                                            <div class="card">
+                                                <img src="image/5.jpg" alt="" width="100%" height="150px">
+                                                <p id="name1">Kid Bag</p>
+                                                <p id="name2">$1100</p>
+                                                <a href="#"  data-name="KIDBAG" data-price="1100" class="add-to-cart btn btn-primary" style="width: 100%;"> ADD TO CART</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                    
+
+                  
+                  </div>
+                </div>
+
+
+
+
+           <!--
+              <div id="footer">
+                <div id="leftfooter"><h4 style="padding-left: 20px;">Contact Details:</h4>
+                <p style="text-align: center;"> Phone Nmber:0999999999 <Br>
+              Address: Santa maria Isabela <br>
+            Email Address:goroospenoven@gmail.com</p></div>
+             
+                <div id="rigtfooter"><h4 style="text-align: left; padding-top: 15px;" >ShopNow  Details:</h4>
+                  <p style="text-align: center;"> Phone Nmber:0999999999 <Br>
+                Address: Santa maria Isabela <br>
+              Email Address:goroospenoven@gmail.com</p></div>
+
+              </div>
+-->
+<script>
+  // ************************************************
+// Shopping Cart API
+// ************************************************
+
+var shoppingCart = (function() {
+// =============================
+// Private methods and propeties
+// =============================
+cart = [];
+
+// Constructor
+function Item(name, price, count) {
+this.name = name;
+this.price = price;
+this.count = count;
+}
+
+// Save cart
+function saveCart() {
+sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+}
+
+// Load cart
+function loadCart() {
+cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+}
+if (sessionStorage.getItem("shoppingCart") != null) {
+loadCart();
+}
+
+
+// =============================
+// Public methods and propeties
+// =============================
+var obj = {};
+
+// Add to cart
+obj.addItemToCart = function(name, price, count) {
+for(var item in cart) {
+if(cart[item].name === name) {
+  cart[item].count ++;
+  saveCart();
+  return;
+}
+}
+var item = new Item(name, price, count);
+cart.push(item);
+saveCart();
+}
+// Set count from item
+obj.setCountForItem = function(name, count) {
+for(var i in cart) {
+if (cart[i].name === name) {
+  cart[i].count = count;
+  break;
+}
+}
+};
+// Remove item from cart
+obj.removeItemFromCart = function(name) {
+for(var item in cart) {
+  if(cart[item].name === name) {
+    cart[item].count --;
+    if(cart[item].count === 0) {
+      cart.splice(item, 1);
+    }
+    break;
+  }
+}
+saveCart();
+}
+
+// Remove all items from cart
+obj.removeItemFromCartAll = function(name) {
+for(var item in cart) {
+if(cart[item].name === name) {
+  cart.splice(item, 1);
+  break;
+}
+}
+saveCart();
+}
+
+// Clear cart
+obj.clearCart = function() {
+cart = [];
+saveCart();
+}
+
+// Count cart 
+obj.totalCount = function() {
+var totalCount = 0;
+for(var item in cart) {
+totalCount += cart[item].count;
+}
+return totalCount;
+}
+
+// Total cart
+obj.totalCart = function() {
+var totalCart = 0;
+for(var item in cart) {
+totalCart += cart[item].price * cart[item].count;
+}
+return Number(totalCart.toFixed(2));
+}
+
+// List cart
+obj.listCart = function() {
+var cartCopy = [];
+for(i in cart) {
+item = cart[i];
+itemCopy = {};
+for(p in item) {
+  itemCopy[p] = item[p];
+
+}
+itemCopy.total = Number(item.price * item.count).toFixed(2);
+cartCopy.push(itemCopy)
+}
+return cartCopy;
+}
+
+// cart : Array
+// Item : Object/Class
+// addItemToCart : Function
+// removeItemFromCart : Function
+// removeItemFromCartAll : Function
+// clearCart : Function
+// countCart : Function
+// totalCart : Function
+// listCart : Function
+// saveCart : Function
+// loadCart : Function
+return obj;
+})();
+
+
+// *****************************************
+// Triggers / Events
+// ***************************************** 
+// Add item
+$('.add-to-cart').click(function(event) {
+event.preventDefault();
+var name = $(this).data('name');
+var price = Number($(this).data('price'));
+shoppingCart.addItemToCart(name, price, 1);
+displayCart();
+});
+
+// Clear items
+$('.clear-cart').click(function() {
+shoppingCart.clearCart();
+displayCart();
+});
+
+
+function displayCart() {
+var cartArray = shoppingCart.listCart();
+var output = "";
+for(var i in cartArray) {
+output += "<tr>"
++ "<td>" + cartArray[i].name + "</td>" 
++ "<td>(" + cartArray[i].price + ")</td>"
++ "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
++ "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
++ "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
++ "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
++ " = " 
++ "<td>" + cartArray[i].total + "</td>" 
++  "</tr>";
+}
+$('.show-cart').html(output);
+$('.total-cart').html(shoppingCart.totalCart());
+$('.total-count').html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function(event) {
+var name = $(this).data('name')
+shoppingCart.removeItemFromCartAll(name);
+displayCart();
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+var name = $(this).data('name')
+shoppingCart.removeItemFromCart(name);
+displayCart();
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+var name = $(this).data('name')
+shoppingCart.addItemToCart(name);
+displayCart();
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+var name = $(this).data('name');
+var count = Number($(this).val());
+shoppingCart.setCountForItem(name, count);
+displayCart();
+});
+
+displayCart();
+
+</script>
+<script>
+           
+  function myFunction() {
+var input, filter, column, name, p, i, txtValue;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+column = document.getElementById("column");
+name = column.getElementsByTagName("name");
+for (i = 0; i < name.length; i++) {
+p = name[i].getElementsByTagName("p")[0];
+if (p) {
+  txtValue = p.textContent || p.innerText;
+  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    name[i].style.display = "";
+  } else {
+    name[i].style.display = "none";
+  }
+}       
+}
+}
+
+     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+        <script src="" async defer></script>
+    </body>
+</html>

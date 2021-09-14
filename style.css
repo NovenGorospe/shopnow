@@ -1,0 +1,260 @@
+div#container{
+  width: 100%;
+
+}
+li#navleft{
+    float: left;
+}
+.topnav-right {
+    float: right;
+  }
+
+  nav#nav{
+      background-color:rgb(206, 0, 0);
+      position: fixed;
+      width: 100%;
+      
+  }
+ 
+  a#link{
+      color: white;
+  }
+  a#logo{
+      color: white;
+      font-size: 30px;
+  }
+  div#header{
+     
+      height: 250px;
+      width: 100%;
+      background-color: tomato;
+  }
+  a#header-logo{
+      color: white;
+      font-weight: bolder;
+      font-size:60px;
+      padding-top: 165px;
+      padding-left: 15%;
+  }
+  div#searchengine{
+      padding-top: 150px;
+      padding-left: 40px;
+      width:40%;
+      
+  }
+  form.searchengine{
+      width: 220px;
+  }
+  div#leftcontent{
+      width: 50%;
+    
+      float: left;
+  }
+  div#rightcontent{
+    width: 50%;
+   
+    float: right;
+   
+}
+div#content-add{
+    width: 100%;
+    height: 300px;
+    padding-top: 20px;
+  
+   
+}
+div#adds{
+    width: 40%;
+}
+#img1{
+    padding-left:50px;
+    width: 250%;
+    height: 300px;
+    padding-top: 5px;
+}
+#vouchers{
+   
+    width: 75%;
+    height: 160px;
+    padding: 5px;
+}
+
+div#category{
+    width: 100%;
+ 
+    height: 500px;
+}
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 16.5%;
+  padding:  10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+p#name{
+  padding-top: 10px;
+}
+
+
+div#footer{
+  width: 100%;
+  height: 120PX;
+  background-color: tomato;
+  color: white;
+}
+div#rightfooter{
+  float: right;
+  width: 50%;
+}
+div#leftfooter{
+  width: 100%;
+  padding-top: 20px;
+  color: white;
+ 
+}
+hr{
+  transform: rotate(90deg);
+  width: 100px;
+}
+
+
+
+/* starts of product list css*/
+p#name1{
+  padding-top: 10px;
+  text-align: left;
+}
+
+p#name2{
+  padding-top: 1px;
+  text-align: left;
+}
+.column1 {
+  float: left;
+  width: 16.5%;
+  padding:  10px;
+  height: 50px;
+}
+.butun{
+  width:100%;
+  background-color: tomato;
+  color: white;
+  height: 40px;
+  border-radius: 20px;
+}
+.row1 {margin: 0 -4px;}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+div#category2{
+  width: 100%;
+}
+.sort{
+ 
+ 
+  padding-top: 100px;
+  padding-bottom: 150px;
+
+}
+/* ends of product list css*/
+div.sticky{
+   position: -webkit-sticky;
+  position: sticky;
+}
+div#about{
+  padding-top: 70px;
+}
+div#leftabout{
+margin-top: 150px;
+  width: 47%;
+  float: left;
+  
+
+}
+div#rightabout{
+  width: 47%;
+  float: right;
+ 
+  height: 600px;
+
+}
+
+input[type=text], select, textarea {
+  width: 60%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ width: 30%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
